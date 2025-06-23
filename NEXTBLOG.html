@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | NEXTIME</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('12.png'); /* Substitua pelo seu fundo */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      color: #000;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header, footer {
+      background-color: #383c68;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      position: relative;
+    }
+
+    #toggle-theme {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffffff30;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .blog-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+    }
+
+    .post {
+      background-color: white;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .post h2 {
+      margin-top: 0;
+    }
+
+    .post .date {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .post p {
+      line-height: 1.6;
+    }
+
+    .post a {
+      color: #28a745;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .post a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 40px;
+    }
+
+    /* 🌙 TEMA ESCURO */
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+      background-image: url('12.png'); /* Substitua pelo fundo noturno */
+    }
+
+    body.dark-mode .blog-container {
+      background-color: rgba(20, 20, 20, 0.85);
+    }
+
+    body.dark-mode .post {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    body.dark-mode .post .date {
+      color: #aaa;
+    }
+
+    body.dark-mode .post a {
+      color: #2ecc71;
+    }
+
+    body.dark-mode header, 
+    body.dark-mode footer {
+      background-color: #1f1f3d;
+      color: white;
+    }
+
+    body.dark-mode #toggle-theme {
+      background-color: #ffffff10;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>NEXBLOG</h1>
+    <button id="toggle-theme">🌙</button>
+  </header>
+
+  <div class="blog-container">
+    <div class="post">
+      <h2>PCISTA</h2>
+      <div class="date">publicado em 20 de abril de 2025</div>
+      <p>como funciona a ia da serie 50 da Nvidia</p>
+      <a href="https://canaltech.com.br/hardware/geforce-rtx-5090-vs-geforce-rtx-4090-o-que-mudou-na-gpu-mais-poderosa/#:~:text=Maiores%20mudan%C3%A7as%20entre%20RTX%205090,sabermos%20como%20funciona%20na%20pr%C3%A1tica.">Leia mais &raquo;</a>
+    </div>
+
+    <div class="post">
+      <h2>Console world</h2>
+      <div class="date">Publicado em 14 de junho de 2025</div>
+      <p>Prioridade total ao sexto integrante da familia playstation</p>
+      <a href="https://www.instagram.com/reel/DK-fgylPGAF/">Leia mais &raquo;</a>
+    </div>
+
+    <div class="post">
+      <h2>Nextlookinfo</h2>
+      <div class="date">Publicado em 22 de junho de 2025</div>
+      <p>"arvore genealogica"Nova protagonista do resident evil pode estar ligada a jil valentaine</p>
+      <a href="https://br.ign.com/resident-evil-requiem/141850/feature/resident-evil-requiem-teoria-aponta-possivel-conexao-singela-de-grace-nova-protagonista-da-franquia">Leia mais &raquo;</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; NEXTIME GROUP BR.</p>
+    <p>Contato: kleberluacssilva@53.gmail.com | Instagram: @EM BREVE</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-theme');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '💻' : '🎮';
+    });
+  </script>
+
+</body>
+</html>
